@@ -222,11 +222,6 @@ if __name__ == "__main__":
     
     
     
-    #Representation
-    #tfidf_parser = TfidfVectorizer(tokenizer=tokenize, lowercase=False, analyzer='word')
-    #corpus_sparse_matrix_features_tfidf = tfidf_parser.fit_transform(tweets)
-    
-    
     train_index, test_index = train_test_split(np.arange(len(tweets)), test_size=0.2, random_state=7)
     labels_train = [labels[tweet_index] for tweet_index in train_index]
     labels_test = [labels[tweet_index] for tweet_index in test_index]
